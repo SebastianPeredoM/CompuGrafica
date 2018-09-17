@@ -1,10 +1,14 @@
 <template lang="pug">
   #app
     template(v-for="seccion in secciones")
-      label {{ seccion.titulo }}
-      ul
-        li(v-for="item in seccion.items")
-          a(:href="item.url") {{ item.desc }}
+      .mdl-card(class="mdl-shadow--2dp")
+        .mdl-card__title
+          h2(class="mdl-card__title-text") {{ seccion.titulo }}
+        .mdl-card__supporting-text
+          ul(class="mdl-list")
+            li(v-for="item in seccion.items" class="mdl-list__item")
+              a(:href="item.url" clas="mdl-list__item-primary-content") {{ item.desc }}
+      
 </template>
 
 <script>
