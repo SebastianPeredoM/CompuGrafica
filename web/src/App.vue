@@ -56,6 +56,15 @@ export default {
           ]
         },
         {
+          titulo: 'Proyectos Fabi',
+          items : [
+            {
+              desc: '´Proyecto final',
+              url : '../src/pages/Proyectofabiola.html'
+            }
+          ]
+        },
+        {
           titulo: 'Castito',
           items : [
             {

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="city" crossorigin="anonymous" src="https://4.bp.blogspot.com/-QvmdtJWqxjU/W_26FiwRH1I/AAAAAAAAENg/pYPUBCGpp7AuQbeXxUxLtvOh6Mo4OK6JACLcBGAs/s1600/dva_explosion.jpg">
+
+        <img id="texture" src="img/dva_explosion.jpg">
+      </a-assets>
+      
+
+      <a-sky id="image-360" radius="1600" src="#city"></a-sky>
+      <a-sphere width="1" height="1" depth="1"
+                 src="#texture" position="0 0 0" rotation="45 45 45" scale="1 1 1" color="#4CC3D9">
+              <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
+              <a-event name="mouseenter" scale="4 1 6"></a-event>
+      </a-sphere>
+      <a-camera position="0 7 5">
+        <a-cursor color="#FF0000"></a-cursor>
+      </a-camera>
+    </a-scene>
+    <script>
+
+      var box = document.querySelector( 'a-box' );
+      var x_box = 1;
+      var y_box = 1;
+      var z_box = 1;
+
+      box.addEventListener( 'mouseenter', function ( )
+      {
+          box.setAttribute( 'scale',
+          {
+              x: x_box,
+              y: y_box,
+              z: z_box
+          } );
+          x_box = x_box + 0.3;
+          y_box = y_box + 0.3;
+          z_box = z_box + 0.3;
+      } );
+
+  </script>
+  </body>
+</html>
