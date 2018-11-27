@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>    
+    <a-scene>
+    <a-sky color="#6EBAA7"></a-sky>
+      <a-box rotation="0 45 0" color="#4CC3D9">
+        <a-animation attribute="position"
+                        dur="3000"
+                        from="-5 0 0"
+                        to="5 0 0"
+                        repeat="indefinite">
+                    </a-animation>
+        <a-animation attribute="rotation"
+                    dur="3000"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"></a-animation>
+        <a-animation attribute="material.color"
+                    from="blue"
+                    to="red"
+                    dur="3000"
+                    repeat="indefinite"></a-animation>
+      </a-box>
+      <a-camera position="0 0 8" user-height="0"></a-camera>
+    </a-scene>
+  </body>
+</html>

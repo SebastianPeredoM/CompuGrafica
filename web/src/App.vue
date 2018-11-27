@@ -35,6 +35,10 @@ export default {
             {
               desc: 'Perfumes',
               url : '../src/pages/Perfumes.html'
+            },
+            {
+              desc: 'Animacion',
+              url : '../src/pages/Animation.html'
             }
           ]
         },
